@@ -4,7 +4,7 @@
 
 //how they get stored and accessed from memory
 
-//primitive - 7 types - call by value - changes in the copy - string, number, boolean, null, undefined, symbol, bigInt
+//primitive - 7 types - call by value - changes in the copy -stack memory- string, number, boolean, null, undefined, symbol, bigInt
 
 // const name = "Emir"
 // const number = 23
@@ -21,21 +21,49 @@
 
 
 
-//non primitive - call by reference - array, objects, functions
+//non primitive - call by reference - heap memory- array, objects, functions
 
-const heroesArray = ['Spiderman', 'Batman', 'Superman']
+// const heroesArray = ['Spiderman', 'Batman', 'Superman']
 
-let myObj = {
-    name: "Emir",
-    age: 21,
-    address: {
-        city:"Delhi",
-        country: "India"
-    }
+// let myObj = {
+//     name: "Emir",
+//     age: 21,
+//     address: {
+//         city:"Delhi",
+//         country: "India"
+//     }
+// }
+
+// const myFunction = function() {
+//     console.log("hello")
+// }
+
+// console.log(typeof myFunction)  //objectFunction
+
+
+
+//*********************Memory***********************
+
+//stack (primitive) - copy
+//heap (non primitive) - reference
+
+let myName = "Mehmed"
+
+let anotherName = myName
+
+anotherName = "emir"
+
+console.log(anotherName)
+console.log(myName)
+
+let userOne = {
+    email: "user@gmail.com",
+    upi: "upi@byl"
 }
 
-const myFunction = function() {
-    console.log("hello")
-}
+let userTwo = userOne
 
-console.log(typeof myFunction)  //objectFunction
+
+userTwo.email = "emir@gmail.com"
+console.log(userOne.email)
+console.log(userTwo.email)
