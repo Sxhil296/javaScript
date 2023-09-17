@@ -39,3 +39,36 @@ const myArray2 = new Array(2,4,6,8,10)
 // console.log(splicedArray)
 // console.log("Original array after splice - ", myArray)
 
+
+
+
+
+// const marvelHeroes = ["Thor", "Hulk", "Spiderman"]
+// const dcHeroes = ["Batman", "Superman", "Aquaman"]
+
+// marvelHeroes.push(dcHeroes)  //doesn't return new array
+// console.log(marvelHeroes)
+// console.log(marvelHeroes[3])
+// console.log(marvelHeroes[3][1])
+
+// const allHeroes =marvelHeroes.concat(dcHeroes)  //returns new array
+// console.log(allHeroes)
+
+// const allNewHeroes = [...marvelHeroes, ...dcHeroes]
+// console.log(allNewHeroes)
+
+
+// const anotherArray = [1, 2, 3, [4, 5, 6], 7, [8, 9, [10, 11] ]]
+// const flatAnotherArray = anotherArray.flat(Infinity)
+// console.log(flatAnotherArray)
+
+// console.log(Array.isArray("Sahil"))
+// console.log(Array.from("Sahil"))
+
+
+let score1 = 100
+let score2 = 200
+let score3 = 300
+console.log(Array.of(score1, score2, score3))
+
+
