@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #010101;
+    height: 90vh;
+    color: #fff;
+
+}
+
+.container{
+    text-align: center;
+}
+#banner{
+    font-size: 20px;
+    margin-bottom: 15px;
+
+}
+#clock{
+    background-color: orange;
+    width:100px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
