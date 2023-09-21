@@ -1,0 +1,21 @@
+*javascript is synchronous and single threaded by default
+
+*synchronous - code will executed sequentially
+*slow due to single threaded
+
+
+*execution context
+-execute one line of code at a time
+
+
+*blocking code vs non blocking code
+-non blocking code can be run while other tasks are running in the background.  Blocking code cannot do this, it must wait for that task
+
+-blocking code block the flow of program
+-blocking code reads file sync
+
+-non blocking code doesn't block execution
+-non blocking reads file async
+
+
+*JS engine consists of memory heap and call stack
