@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  text-align: center;
+}
+
+.button {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  display: inline-block;
+}
+#gray{
+    background-color: gray;
+}
+#white{
+    background-color: #fff;
+}
+#blue{
+    background-color: blue;
+}
+#yellow{
+    background-color: yellow;
+}
