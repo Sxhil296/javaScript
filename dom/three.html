@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      body {
+        background-color: #212121;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+    const divEl = document.createElement("div");
+    console.log(divEl);
+    divEl.className = "main";
+    // divEl.id = "myID"first
+    divEl.id = Math.round(Math.random() * 10 + 1);
+    divEl.setAttribute("title", "Title by JS");
+    divEl.style.backgroundColor = "green";
+    divEl.style.padding = "15px";
+    // divEl.innerText = "DOM Create Element"
+    const addText = document.createTextNode("DOM Create Element")
+    divEl.appendChild(addText)
+    document.body.appendChild(divEl)
+
+  </script>
+</html>
