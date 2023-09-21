@@ -22,9 +22,13 @@
     divEl.style.backgroundColor = "green";
     divEl.style.padding = "15px";
     // divEl.innerText = "DOM Create Element"
-    const addText = document.createTextNode("DOM Create Element")
-    divEl.appendChild(addText)
-    document.body.appendChild(divEl)
-
+    const addText = document.createTextNode("DOM Create Element");
+    divEl.appendChild(addText);
+    document.body.appendChild(divEl);
+    const headingEl = document.createElement("h1");
+    headingEl.style.textAlign = "center";
+    const addHeadingText = document.createTextNode("Hello, World!");
+    headingEl.appendChild(addHeadingText);
+    divEl.appendChild(headingEl);
   </script>
 </html>
