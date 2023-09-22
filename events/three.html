@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chai aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+
+  <script>
+    //    setInterval(function(){
+    //     console.log("Emir", Date.now())
+    //    }, 2000)
+
+    const sayDate = (str) => {
+      console.log(str, "Emir", new Date());
+    };
+
+    let dateInterval;
+
+    document.querySelector("#start").addEventListener("click", () => {
+      dateInterval = setInterval(sayDate, 2000, "Hello");
+      console.log("Started!");
+    });
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearInterval(dateInterval);
+      console.log("Stopped!");
+    });
+  </script>
+</html>
