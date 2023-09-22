@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlimited Colors</title>
+    <style>
+        body{
+            background-color: #414141;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        h1{
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        button{
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Start should change the background color every second</h1>
+    <h2 id="color"></h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const randomColor = () => {
+        const hex = "0123456789ABCDEF"
+        let color = `#`
+        for (let i = 0; i < 6; i++) {
+            color += hex[Math.floor(Math.random() * 16)]
+        }
+        return color
+       
+    }
+    // console.log(randomColor())
+
+    let colorInterval;
+
+    const startChangingColor = () => {
+        document.body.style.backgroundColor = randomColor()
+        document.getElementById('color').innerHTML = `Color : ${randomColor()}`
+    }
+
+    const stopChangingColor = () => {}
+    // document.querySelector('#start').addEventListener('click', startChangingColor)
+    document.querySelector('#start').addEventListener('click', ()=> {
+        colorInterval = setInterval(startChangingColor, 1000)
+    })
+
+    // document.querySelector('#stop').addEventListener('click', stopChangingColor)
+    document.querySelector('#stop').addEventListener('click', () => {
+        clearInterval(colorInterval);
+    })
+   
+</script>
+</html>
