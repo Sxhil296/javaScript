@@ -7,7 +7,7 @@ JavaScript does have a concept called "classes," introduced in ECMAScript 6 (ES6
 Object-Oriented Programming (OOP) is a programming paradigm that uses objects as the central building blocks for creating and organizing code. In JavaScript, OOP is supported, but it's a bit different from classical OOP languages like Java or C++.
 
 ## Objects
- collections of key-value pairs, where each value can be a piece of data or a function (method).
+Collections of key-value pairs, where each value can be a piece of data or a function (method). It is the base unit.
 
  ```javascript
  // Creating an object
@@ -25,6 +25,33 @@ console.log(person.firstName); // Output: "John"
 person.greet(); // Output: "Hello, I'm John Doe"
 
 ```
+## Constructor Function
+A constructor function in JavaScript is a special function used to create and initialize objects. It's like a blueprint for creating multiple objects with the same structure and behavior.
+
+```javascript
+// Constructor function for creating Person objects
+function Person(name, age) {
+    this.name = name; // Setting the name property
+    this.age = age;   // Setting the age property
+
+    // Adding a method to the Person objects
+    this.sayHello = function() {
+        console.log(`Hello, I'm ${this.name} and I'm ${this.age} years old.`);
+    };
+}
+
+// Creating two Person objects using the constructor
+const person1 = new Person("John", 30);
+const person2 = new Person("Alice", 25);
+
+// Accessing properties and calling the method
+console.log(person1.name);     // Output: "John"
+console.log(person2.age);      // Output: 25
+person1.sayHello();            // Output: "Hello, I'm John and I'm 30 years old."
+person2.sayHello();            // Output: "Hello, I'm Alice and I'm 25 years old."
+
+```
+
 ## Abstraction
 Abstraction means simplifying complex things by modeling classes based on their essential characteristics. It hides the unnecessary details and focuses on what's important.
 
