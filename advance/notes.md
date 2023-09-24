@@ -24,4 +24,16 @@ const person = {
 console.log(person.firstName); // Output: "John"
 person.greet(); // Output: "Hello, I'm John Doe"
 
+```
+## Abstraction
+Abstraction means simplifying complex things by modeling classes based on their essential characteristics. It hides the unnecessary details and focuses on what's important.
+
+## Inheritance
+Inheritance allows you to create new classes (child classes) that inherit properties and methods from existing classes (parent classes). It promotes code reuse.
+
+## Encapsulation
+Encapsulation bundles data (properties) and the methods (functions) that operate on that data into a single unit (object or class). It keeps data safe and controlled.
+
+## Polymorphism
+Polymorphism allows different classes or objects to respond to the same method or property in a way specific to their individual types. It promotes flexibility and extensibility.
 
