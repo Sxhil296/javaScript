@@ -12,3 +12,6 @@ Suppose you have the following HTML element:
 <div id="exampleDiv">
     <p>This is some <strong>bold</strong> text.</p>
 </div>
+```javascript
+const divElement = document.getElementById('exampleDiv');
+console.log(divElement.innerHTML); // Output: "<p>This is some <strong>bold</strong> text.</p>"
