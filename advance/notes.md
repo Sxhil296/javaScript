@@ -64,3 +64,44 @@ Encapsulation bundles data (properties) and the methods (functions) that operate
 ## Polymorphism
 Polymorphism allows different classes or objects to respond to the same method or property in a way specific to their individual types. It promotes flexibility and extensibility.
 
+## Prototype
+In JavaScript, each object has a property called prototype, which is a reference to another object.
+
+When you access a property or method on an object, JavaScript looks for that property/method on the object itself. If it's not found, it looks up the prototype chain.
+
+Prototypes are used to implement inheritance in JavaScript.
+
+Constructor functions use prototypes to share methods among objects created from the same constructor.
+
+```javascript
+// Example: Creating an object and accessing a property
+const person = { name: "John" };
+console.log(person.name); // Output: "John"
+
+// Adding a property to the object's prototype
+Object.prototype.sayHello = function() {
+    console.log(`Hello, I'm ${this.name}`);
+};
+
+// Now, the object can access the sayHello method from its prototype
+person.sayHello(); // Output: "Hello, I'm John"
+
+//another example
+// Constructor function
+function Person(name) {
+    this.name = name;
+}
+
+// Adding a method to the Person prototype
+Person.prototype.sayHello = function() {
+    console.log(`Hello, I'm ${this.name}`);
+};
+
+// Creating instances
+const person1 = new Person("Alice");
+const person2 = new Person("Bob");
+
+person1.sayHello(); // Output: "Hello, I'm Alice"
+person2.sayHello(); // Output: "Hello, I'm Bob"
+
+
